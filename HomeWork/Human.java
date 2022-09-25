@@ -24,5 +24,6 @@ public class Human {
             this.position = "Информация не указана";
         } else {this.position = town;
         }
+
     }
 }

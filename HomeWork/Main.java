@@ -17,7 +17,5 @@ public class Main {
         System.out.println(" Привет! Меня зовут " + anna.name + "." + " Я из города " + anna.town + "." + " Я родился в " + (currentYear - anna.yearOfBirth) + " году" + "." + " Я работаю на должности " + anna.position + "." + " Будем знакомы!");
         System.out.println(" Привет! Меня зовут " + kat.name + "." + " Я из города " + kat.town + "." + " Я родился в " + (currentYear - kat.yearOfBirth) + " году" + "." + " Я работаю на должности " + kat.position + "." + " Будем знакомы!");
         System.out.println(" Привет! Меня зовут " + artem.name + "." + " Я из города " + artem.town + "." + " Я родился в " + (currentYear - artem.yearOfBirth) + " году" + "." + " Я работаю на должности " + artem.position + "." + " Будем знакомы!");
-
-
     }
 }
