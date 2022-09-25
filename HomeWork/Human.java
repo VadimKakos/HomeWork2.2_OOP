@@ -1,28 +1,28 @@
 package HomeWork;
 
 public class Human {
-    int yearOfBirth;
-    String name;
-    String town;
-    int currentYear = 2022;
 
-    Human(String name, int yearOfBirth, String town) {
-        this.name = name;
-        this.yearOfBirth = yearOfBirth;
-        this.town = town;
-    }
+    public String name;
+    public String town;
+    public int yearOfBirth;
+    public String position;
 
-    void messageForMen() {
-        System.out.println("Привет! Меня зовут " + name + "."
-                + " Я из города " + town + "."
-                + " Я родился в " + (currentYear - yearOfBirth)
-                + " году. Будем знакомы!");
-    }
-
-    void messageForWomen() {
-        System.out.println("Привет! Меня зовут " + name + "."
-                + " Я из города " + town + "."
-                + " Я родилась в " + (currentYear - yearOfBirth)
-                + " году. Будем знакомы!");
+    Human(String name, String town, int yearOfBirth, String position) {
+        if (name == null) {
+            this.name = "Информация не указана";
+        }else{ this.name = name;}
+        if (town == null) {
+            this.name = "Информация не указана";
+        } else {this.town = town;
+        }
+        if (yearOfBirth < 0) {
+            this.yearOfBirth = Math.abs(yearOfBirth);
+        } else {
+            this.yearOfBirth = yearOfBirth;
+        }
+        if (position == null) {
+            this.position = "Информация не указана";
+        } else {this.position = town;
+        }
     }
 }
