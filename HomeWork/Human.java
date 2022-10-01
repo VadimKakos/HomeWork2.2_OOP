@@ -1,28 +1,56 @@
 package HomeWork;
 
 public class Human {
-    int yearOfBirth;
-    String name;
-    String town;
-    int currentYear = 2022;
 
-    Human(String name, int yearOfBirth, String town) {
-        this.name = name;
-        this.yearOfBirth = yearOfBirth;
-        this.town = town;
+    public String name;
+    private String town;
+    private int yearOfBirth;
+    public String position;
+
+    Human(String name, String town, int yearOfBirth, String position) {
+        if (name == null) {
+            this.name = "Информация не указана";
+        } else {
+            this.name = name;
+        }
+        if (town == null) {
+            this.name = "Информация не указана";
+        } else {
+            this.town = town;
+        }
+        if (yearOfBirth < 0) {
+            this.yearOfBirth = Math.abs(yearOfBirth);
+        } else {
+            this.yearOfBirth = yearOfBirth;
+        }
+        if (position == null) {
+            this.position = "Информация не указана";
+        } else {
+            this.position = town;
+        }
     }
 
-    void messageForMen() {
-        System.out.println("Привет! Меня зовут " + name + "."
-                + " Я из города " + town + "."
-                + " Я родился в " + (currentYear - yearOfBirth)
-                + " году. Будем знакомы!");
+    public String getTown() {
+        return town;
     }
 
-    void messageForWomen() {
-        System.out.println("Привет! Меня зовут " + name + "."
-                + " Я из города " + town + "."
-                + " Я родилась в " + (currentYear - yearOfBirth)
-                + " году. Будем знакомы!");
+    public void setTown(String town) {
+        if (town != null || !town.isEmpty()) {
+            this.town = town;
+        } else {
+            this.town = "Информация не указана";
+        }
+    }
+
+    public int getYearOfBirth() {
+        return yearOfBirth;
+    }
+
+    public void setYearOfBirth(Integer age) {
+        if (age >= 0) {
+            this.yearOfBirth = age;
+        } else {
+            this.yearOfBirth = 0;
+        }
     }
 }
